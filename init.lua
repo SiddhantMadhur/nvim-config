@@ -1,2 +1,5 @@
 require("siddhantmadhur")
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none"})
+	local set = vim.opt
+	set.tabstop = 4
+	set.softtabstop = 4
+	set.shiftwidth = 4
