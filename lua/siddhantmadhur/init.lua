@@ -1,6 +1,5 @@
 require('siddhantmadhur.remap')
-vim.opt.termguicolors = true
-vim.cmd.colorscheme 'melange'
+vim.cmd("colorscheme kanagawa")
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
