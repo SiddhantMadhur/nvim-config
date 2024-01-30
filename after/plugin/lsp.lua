@@ -10,7 +10,7 @@ require('lspconfig').dartls.setup({})
 -- here you can setup the language servers
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = { 'tailwindcss', 'gopls', 'templ', 'tsserver', 'htmx', 'html'},
+  ensure_installed = { 'rust_analyzer', 'tailwindcss', 'gopls', 'templ', 'tsserver', 'htmx', 'html'},
   handlers = {
     lsp_zero.default_setup, 
   },
