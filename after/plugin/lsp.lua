@@ -6,13 +6,33 @@ lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
-require('lspconfig').dartls.setup({})
+local lspconfig = require('lspconfig')
 -- here you can setup the language servers
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = { 'clangd', 'rust_analyzer', 'tailwindcss', 'gopls', 'templ', 'tsserver', 'htmx', 'html'},
+  ensure_installed = { 'emmet_ls', 'clangd', 'rust_analyzer', 'tailwindcss', 'gopls', 'templ', 'tsserver', 'htmx', 'html'},
   handlers = {
-    lsp_zero.default_setup, 
+    lsp_zero.default_setup,
+    lspconfig.html.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+        filetypes = {"html", "templ"}
+    }),
+    lspconfig.emmet_ls.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+        filetypes = {"html", "templ"}
+    }),
+    lspconfig.tailwindcss.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+        filetypes = {"html", "templ"}
+    }),
+    lspconfig.htmx.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+        filetypes = {"html", "templ"}
+    })
   },
 })
 
