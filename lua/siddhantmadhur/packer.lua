@@ -13,7 +13,8 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
  
-  use "rebelot/kanagawa.nvim"
+  -- Using Packer:
+  use 'Mofiqul/dracula.nvim'
   use('nvim-treesitter/nvim-treesitter', {run= ':TSUpdate'})
 
   use {

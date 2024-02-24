@@ -10,7 +10,7 @@ local lspconfig = require('lspconfig')
 -- here you can setup the language servers
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'svelte', 'emmet_ls', 'clangd', 'rust_analyzer', 'tailwindcss', 'gopls', 'templ', 'tsserver', 'htmx', 'html'},
+  ensure_installed = {'jsonls', 'svelte', 'emmet_ls', 'clangd', 'rust_analyzer', 'tailwindcss', 'gopls', 'templ', 'tsserver', 'htmx', 'html'},
   handlers = {
     lsp_zero.default_setup,
     lspconfig.html.setup({

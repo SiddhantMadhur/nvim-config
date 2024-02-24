@@ -84,15 +84,15 @@ _G.packer_plugins = {
     path = "/home/siddhantmadhur/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["dracula.nvim"] = {
+    loaded = true,
+    path = "/home/siddhantmadhur/.local/share/nvim/site/pack/packer/start/dracula.nvim",
+    url = "https://github.com/Mofiqul/dracula.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/siddhantmadhur/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
-  },
-  ["kanagawa.nvim"] = {
-    loaded = true,
-    path = "/home/siddhantmadhur/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
-    url = "https://github.com/rebelot/kanagawa.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
