@@ -14,9 +14,8 @@ return require('packer').startup(function(use)
   }
  
   -- Using Packer:
-  use 'Mofiqul/dracula.nvim'
   use('nvim-treesitter/nvim-treesitter', {run= ':TSUpdate'})
-
+  use { "ellisonleao/gruvbox.nvim" }
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v3.x',
