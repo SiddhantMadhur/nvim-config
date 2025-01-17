@@ -12,21 +12,26 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {'zls', 'bashls', 'jsonls', 'svelte', 'emmet_ls', 'clangd', 'rust_analyzer', 'tailwindcss', 'gopls', 'templ', 'tsserver', 'htmx', 'html'},
   handlers = {
-    lsp_zero.default_setup,
+      lspconfig.zls.setup({
+          on_attach = on_attach,
+          capabilities = capabilities,
+          filetypes = {"zig"},
+      }),
+    lsp_zero.setup_servers({'dartls', force = true}),
     lspconfig.html.setup({
         on_attach = on_attach,
         capabilities = capabilities,
-        filetypes = {"html", "svelte", "templ"}
+        filetypes = {"typescriptreact", "javascriptreact", "html", "svelte", "templ"}
     }),
     lspconfig.emmet_ls.setup({
         on_attach = on_attach,
         capabilities = capabilities,
-        filetypes = {"html", "templ", "svelte"}
+        filetypes = {"typescriptreact", "javascriptreact", "html", "templ", "svelte"}
     }),
     lspconfig.tailwindcss.setup({
         on_attach = on_attach,
         capabilities = capabilities,
-        filetypes = {"html", "templ", "svelte"}
+        filetypes = {"typescriptreact", "javascriptreact", "html", "templ", "svelte"}
     }),
     lspconfig.htmx.setup({
         on_attach = on_attach,
@@ -37,7 +42,12 @@ require('mason-lspconfig').setup({
         on_attach = on_attach,
         capabilities = capabilites,
         filetypes = {"go", "templ"}
-    })
+    }),
+    lspconfig.tsserver.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+        filetypes = {"typescript", "typescriptreact", "javascriptreact", "javascript"}
+    }),
   },
 })
 

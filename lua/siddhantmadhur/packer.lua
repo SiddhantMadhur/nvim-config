@@ -54,4 +54,16 @@ return require('packer').startup(function(use)
   use "folke/trouble.nvim"
 
   use('jose-elias-alvarez/null-ls.nvim')
+  
+  use {
+      'prettier/vim-prettier'
+  }
+
+  use {
+      'akinsho/flutter-tools.nvim',
+      requires = {
+          'nvim-lua/plenary.nvim',
+          'stevearc/dressing.nvim', -- optional for vim.ui.select
+      },
+  }
 end)

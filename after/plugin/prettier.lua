@@ -1,20 +1,4 @@
-local prettier = require("prettier")
-
-prettier.setup({
-  bin = 'prettier', -- or `'prettierd'` (v0.23.3+)
-  filetypes = {
-    "css",
-    "graphql",
-    "html",
-    "javascript",
-    "javascriptreact",
-    "json",
-    "less",
-    "markdown",
-    "scss",
-    "typescript",
-    "typescriptreact",
-    "yaml",
-    "schema"
-  },
-})
+-- Prettier
+vim.keymap.set("n", "<C-m>", function()
+    vim.cmd.Prettier()
+end)
