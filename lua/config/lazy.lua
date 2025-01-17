@@ -35,7 +35,7 @@ require("lazy").setup({
 		-- IMPORT PLUGINS HERE
 		{import = "plugins"},
 	},
-	install = { colorscheme = {"habamax"} },
+	install = { colorscheme = {"gruvbox"} },
 
 	checker = { enabled = true, notify = false },
 })
