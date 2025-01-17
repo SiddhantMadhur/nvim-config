@@ -38,4 +38,8 @@ require("lazy").setup({
 	install = { colorscheme = {"gruvbox"} },
 
 	checker = { enabled = true, notify = false },
+
+
 })
+
+
