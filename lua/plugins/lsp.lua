@@ -30,6 +30,22 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "rust_analyzer",
+                "astro",
+                "bashls",
+                "clangd",
+                "cmake",
+                "cssls",
+                "ast_grep",
+                "dockerls",
+                "glslls",
+                "gopls",
+                "html",
+                "java_language_server",
+                "eslint",
+                "ols",
+                "pylsp",
+                "sqls",
+                "svelte",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
