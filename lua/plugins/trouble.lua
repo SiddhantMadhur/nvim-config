@@ -1,6 +1,9 @@
 return {
     {
         "folke/trouble.nvim",
+        dependencies = {
+            "nvim-telescope/telescope-fzf-native.nvim",
+        },
         config = function()
             require("trouble").setup({
                 icons = false,

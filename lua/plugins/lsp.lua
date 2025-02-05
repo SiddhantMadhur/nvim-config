@@ -40,12 +40,12 @@ return {
                 "glslls",
                 "gopls",
                 "html",
-                "java_language_server",
                 "eslint",
                 "ols",
                 "pylsp",
                 "sqls",
                 "svelte",
+                "ts_ls",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -68,6 +68,18 @@ return {
                         }
                     }
                 end,
+
+                ["ts_ls"] = function ()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.ts_ls.setup {
+                        settings = {
+                            implicitProjectConfiguration = {
+                                checkJs = true
+                            },
+                        }
+                    }
+                end
+
             }
         })
 
